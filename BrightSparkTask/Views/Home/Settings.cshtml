@@ -1,0 +1,20 @@
+﻿<!-- ko with: settings -->
+@{
+    ViewBag.Title = "_Settings";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form style="margin-top:35px;">
+    <input type="file" id="myfile" />
+    <input type="button" data-bind="click:uploadFile" value="Upload" style="margin-top: 5px;" />
+
+</form>
+
+
+
+<!-- /ko -->
+
+@section Scripts{
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/app")
+}
