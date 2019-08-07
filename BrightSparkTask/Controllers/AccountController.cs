@@ -12,7 +12,7 @@ using BrightSparkTask.Models;
 
 namespace BrightSparkTask.Controllers
 {
-    [Authorize]
+
     public class AccountController : Controller
     {
         private ApplicationSignInManager _signInManager;

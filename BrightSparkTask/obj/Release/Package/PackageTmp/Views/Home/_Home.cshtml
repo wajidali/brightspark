@@ -1,0 +1,54 @@
+﻿<!-- ko with: home -->
+
+
+    <div class="container">
+        <div id="header">
+            <h3>Bright Spark Calculator</h3>
+        </div>
+        <div id="calc" class="text-center">
+            <div id="display">
+                <div id="result"><p data-bind="text: currentNumber">1</p></div>
+                <div id="previous"><p data-bind="text: previous">1</p></div>
+                
+
+            </div>
+            <div id="keyboard">
+                <div class="row">                    
+                    <button class="btn btn-danger" value="ac" data-bind="click: clearScreen">AC</button>
+                    <button class="btn btn-danger" value="ce" data-bind="click: trimLast">CE</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-info" value="7" data-bind='click: function() { clickValue("7") }'>7</button>
+                    <button class="btn btn-info" value="8" data-bind='click: function() { clickValue("8") }'>8</button>
+                    <button class="btn btn-info" value="9" data-bind='click: function() { clickValue("9") }'>9</button>
+                    <button class="btn btn-danger" value="ac" data-bind="click: bracketOpen">(</button>
+                    <button class="btn btn-danger" value="ce" data-bind="click: bracketClose">)</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-info" value="4" data-bind='click: function() { clickValue("4") }'>4</button>
+                    <button class="btn btn-info" value="5" data-bind='click: function() { clickValue("5") }'>5</button>
+                    <button class="btn btn-info" value="6" data-bind='click: function() { clickValue("6") }'>6</button>
+                    <button class="btn btn-warning" value="/" data-bind='click: function() { signClick("/") }'>/</button>
+                    <button class="btn btn-warning" value="*" data-bind='click: function() { signClick("*") }'>*</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-info" value="1" data-bind='click: function() { clickValue("1") }'>1</button>
+                    <button class="btn btn-info" value="2" data-bind='click: function() { clickValue("2") }'>2</button>
+                    <button class="btn btn-info" value="3" data-bind='click: function() { clickValue("3") }'>3</button>
+                    <button class="btn btn-warning" value="+" data-bind='click: function() { signClick("+") }'>+</button>
+                    <button class="btn btn-success btn-result" value="=" data-bind="click: equalClick">=</button>
+
+                </div>
+                <div class="row last-row">
+                    <button class="btn btn-info btn-zero" value="0" data-bind='click: function() { clickValue("0") }'>0</button>
+                    <!-- <button class="invisible" value=""></button> -->
+                    <button class="btn btn-warning" value="." data-bind='click: function() { clickValue(".") }'>.</button>
+                    <button class="btn btn-warning" value="-" data-bind='click: function() { signClick("-") }'>-</button>
+                    <!-- <button class="invisible" value=""></button> -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- /ko -->
